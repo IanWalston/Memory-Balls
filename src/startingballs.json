@@ -1,14 +1,14 @@
 [
-  { "key": "ball1", "loc": { "x": 100, "y": 100 }, "color": "red" },
-  { "key": "ball2", "loc": { "x": 200, "y": 100 }, "color": "orange" },
-  { "key": "ball3", "loc": { "x": 300, "y": 100 }, "color": "yellow" },
-  { "key": "ball4", "loc": { "x": 400, "y": 100 }, "color": "green" },
-  { "key": "ball5", "loc": { "x": 500, "y": 100 }, "color": "blue" },
-  { "key": "ball6", "loc": { "x": 600, "y": 100 }, "color": "indigo" },
-  { "key": "ball7", "loc": { "x": 100, "y": 200 }, "color": "violet" },
-  { "key": "ball8", "loc": { "x": 200, "y": 200 }, "color": "black" },
-  { "key": "ball9", "loc": { "x": 300, "y": 200 }, "color": "brown" },
-  { "key": "ballA", "loc": { "x": 400, "y": 200 }, "color": "tan" },
-  { "key": "ballB", "loc": { "x": 500, "y": 200 }, "color": "salmon" },
-  { "key": "ballC", "loc": { "x": 600, "y": 200 }, "color": "pink" }
+  { "key": "ball1", "loc": { "x": 120, "y": 100 }, "radius":85, "color": "red" },
+  { "key": "ball2", "loc": { "x": 240, "y": 100 }, "radius":85, "color": "orange" },
+  { "key": "ball3", "loc": { "x": 360, "y": 100 }, "radius":85, "color": "yellow" },
+  { "key": "ball4", "loc": { "x": 480, "y": 100 }, "radius":85, "color": "green" },
+  { "key": "ball5", "loc": { "x": 600, "y": 100 }, "radius":85, "color": "blue" },
+  { "key": "ball6", "loc": { "x": 720, "y": 100 }, "radius":85, "color": "indigo" },
+  { "key": "ball7", "loc": { "x": 120, "y": 220 }, "radius":85, "color": "violet" },
+  { "key": "ball8", "loc": { "x": 240, "y": 220 }, "radius":85, "color": "black" },
+  { "key": "ball9", "loc": { "x": 360, "y": 220 }, "radius":85, "color": "brown" },
+  { "key": "ballA", "loc": { "x": 480, "y": 220 }, "radius":85, "color": "tan" },
+  { "key": "ballB", "loc": { "x": 600, "y": 220 }, "radius":85, "color": "salmon" },
+  { "key": "ballC", "loc": { "x": 720, "y": 220 }, "radius":85, "color": "pink" }
 ]

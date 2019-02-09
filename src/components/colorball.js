@@ -4,9 +4,9 @@ const Circle = props => (
   <circle
     cx={props.loc.x}
     cy={props.loc.y}
-    r="50"
+    r={props.radius}
     fill={props.color}
-    onClick={props.shuffle}
+    onClick={()=>props.click(props.color)}
   />
 );
 

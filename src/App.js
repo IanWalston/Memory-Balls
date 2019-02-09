@@ -1,11 +1,16 @@
 import React from "react";
+
 import Circle from "./components/colorball";
+import Display from "./components/display";
+
 import positions from "./positions.json";
 import startingballs from "./startingballs.json";
 
 class App extends React.Component {
   state = {
     score: 0,
+    pickedcolors: [],
+    level: 1,
     balls: startingballs
   };
 
@@ -26,13 +31,36 @@ class App extends React.Component {
     this.setState({ balls: newballs });
   };
 
+  clickball = color => {
+    if (this.state.pickedcolors.includes(color)) {
+      alert("bitch, you dun goofed");
+      this.setState({ pickedcolors: [] });
+      this.setState({ score: 0 });
+    } else {
+      this.setState({ pickedcolors: this.state.pickedcolors.concat([color]) });
+      this.setState({ score: this.state.score + 1 });
+      if (this.state.score === 12) {
+        alert("great job");
+        this.setState({ pickedcolors: [] });
+        this.setState({ score: 0 });
+        this.setState({ level: this.state.level + 1 });
+      }
+    }
+
+    this.shuffle();
+  };
+
   render() {
     return (
-      <svg viewBox="0 0 841.9 595.3">
-        {this.state.balls.map(ball => (
-          <Circle {...ball} shuffle={this.shuffle} />
-        ))}
-      </svg>
+      <div>
+        <Display score={this.state.score} level={this.state.level} />
+
+        <svg viewBox="0 0 841.9 595.3">
+          {this.state.balls.map(ball => (
+            <Circle {...ball} click={this.clickball} />
+          ))}
+        </svg>
+      </div>
     );
   }
 }

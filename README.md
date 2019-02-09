@@ -1,3 +1,3 @@
 #Memory-Game
 
-Memory game made with React and SVG. 
+Memory game made with React and SVG elements. 
