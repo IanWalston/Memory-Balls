@@ -5,6 +5,7 @@ import Display from "./components/display";
 
 import positions from "./positions.json";
 import startingballs from "./startingballs.json";
+import levels from "./levels.json";
 
 class App extends React.Component {
   state = {
@@ -32,15 +33,26 @@ class App extends React.Component {
   };
 
   clickball = color => {
+    //determin right from wrong
     if (this.state.pickedcolors.includes(color)) {
-      alert("bitch, you dun goofed");
+      alert("you've already picked that color");
       this.setState({ pickedcolors: [] });
       this.setState({ score: 0 });
     } else {
       this.setState({ pickedcolors: this.state.pickedcolors.concat([color]) });
       this.setState({ score: this.state.score + 1 });
-      if (this.state.score === 12) {
+      if (this.state.score >= 11) {
+        //set next level
         alert("great job");
+        const newballs = this.state.balls.map(ball => {
+          const newcolor = levels["level" + (this.state.level + 1)].pop();
+
+          ball.color = newcolor;
+          return ball;
+        });
+
+        console.log(newballs);
+
         this.setState({ pickedcolors: [] });
         this.setState({ score: 0 });
         this.setState({ level: this.state.level + 1 });

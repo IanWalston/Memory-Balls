@@ -1,4 +1,18 @@
 {
-  "level2": ["blue", "skyblue", "lightblue", "turqouse", ""],
-  "level3": []
+  "level2": [
+    "blue",
+    "skyblue",
+    "lightblue",
+    "turquoise",
+    "#080810",
+    "#11162b",
+    "#6476a5",
+    "#535075",
+    "#475785 ",
+    "#darkgrey",
+    "grey",
+    "lightgrey"
+  ],
+  "level3": [],
+  "level4": []
 }
