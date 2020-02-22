@@ -11,7 +11,7 @@ class App extends React.Component {
     state = {
         score: 0,
         pickedcolors: [],
-        level: 2,
+        level: 1,
         balls: startingballs
     };
 
